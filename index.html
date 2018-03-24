@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script type="text/javascript" src="js/animacao.js"></script>
+      <script type="text/javascript" src="js/sumindo.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+      .home{
+        height: 100vh;
+        width: 100%;
+        z-index: 1;
+      }
+      .titulo{
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 100px;
+      }
+      .efeito{
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        position: absolute;
+        justify-content: center;
+      }
+      .testo{
+        margin-bottom: 50px;
+      }
+      .sumir{
+        transform: translate3d(0,-100px,0);
+        opacity: 0;
+        transition: .6s;
+      }
+      .descendo{
+        transform: translate3d(0,0,0);
+        opacity: 1;
+        transition: .6s;
+      }
+      .ef0{
+        transform: translate3d(0,-100px,0);
+        opacity: 0;
+        transition: .6s;
+      }
+      .subindo{
+        transform: translate3d(0,0,0);
+        opacity: 1;
+        transition: .3s;
+      }
+      .ef1{
+        transform: translate3d(0,100px,0);
+        opacity: 0;
+        transition: .3s;
+      }
+      .girando{
+        transform: rotate(360deg);
+        opacity: 1;
+        transition: .8s;
+      }
+      .ef2{
+        transform: rotate(0deg);
+        opacity: 1;
+        transition: .8s;
+      }
+    </style>
+  </head>
+  <body onload="click()">
+    <div class="container-fluid home">
+        <div class="row titulo">
+            <h1>Animações</h1>
+        </div>
+        <div class="row efeito">
+          <h2   style='margin-bottom:50px;'>Efeito</h2>
+          <br>
+          <div class="row">
+              <div class="input-group">
+              <select id="valor" class="custom-select">
+                <option value="null">--Escolha uma animação--</option>
+                <option value="0">Descendo</option>
+                <option value="1">Subindo</option>
+                <option value="2">Girando</option>
+              </select>
+              <div class="input-group-append">
+                <button id="bot"  class="botao btn btn-outline-secondary" type="button">Animar</button>
+              </div>
+          </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+<script type="text/javascript" src="js/desanimar.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
